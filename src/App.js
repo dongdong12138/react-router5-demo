@@ -1,4 +1,4 @@
-import { Link, BrowserRouter, Route } from 'react-router-dom'
+import { Link, Route } from 'react-router-dom'
 import Home from './components/Home'
 import About from './components/About'
 
@@ -20,10 +20,8 @@ function App() {
 
             {/*React 中，靠路由链接实现切换组件*/}
             {/*编写路由链接*/}
-            <BrowserRouter>
-              <Link className="list-group-item" to="/about">About</Link>
-              <Link className="list-group-item" to="/home">Home</Link>
-            </BrowserRouter>
+            <Link className="list-group-item" to="/about">About</Link>
+            <Link className="list-group-item" to="/home">Home</Link>
 
           </div>
         </div>
@@ -32,10 +30,8 @@ function App() {
             <div className="panel-body">
 
               {/*注册路由*/}
-              <BrowserRouter>
-                <Route path="/about" component={About}/>
-                <Route path="/home" component={Home}/>
-              </BrowserRouter>
+              <Route path="/about" component={About}/>
+              <Route path="/home" component={Home}/>
 
             </div>
           </div>
