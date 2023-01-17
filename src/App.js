@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, BrowserRouter } from 'react-router-dom'
 
 function App() {
   return (
@@ -18,8 +18,10 @@ function App() {
 
             {/*React 中，靠路由链接实现切换组件*/}
             {/*编写路由链接*/}
-            <Link className="list-group-item" to="/about">About</Link>
-            <Link className="list-group-item" to="/home">Home</Link>
+            <BrowserRouter>
+              <Link className="list-group-item" to="/about">About</Link>
+              <Link className="list-group-item" to="/home">Home</Link>
+            </BrowserRouter>
 
           </div>
         </div>
