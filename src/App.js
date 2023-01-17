@@ -1,4 +1,6 @@
-import { Link, BrowserRouter } from 'react-router-dom'
+import { Link, BrowserRouter, Route } from 'react-router-dom'
+import Home from './components/Home'
+import About from './components/About'
 
 function App() {
   return (
@@ -28,7 +30,11 @@ function App() {
         <div className="col-xs-6">
           <div className="panel">
             <div className="panel-body">
-              <h3>我是Home的内容</h3>
+
+              {/*注册路由*/}
+              <Route path="/about" component={About}/>
+              <Route path="/home" component={Home}/>
+
             </div>
           </div>
         </div>
