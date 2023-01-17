@@ -32,8 +32,10 @@ function App() {
             <div className="panel-body">
 
               {/*注册路由*/}
-              <Route path="/about" component={About}/>
-              <Route path="/home" component={Home}/>
+              <BrowserRouter>
+                <Route path="/about" component={About}/>
+                <Route path="/home" component={Home}/>
+              </BrowserRouter>
 
             </div>
           </div>
