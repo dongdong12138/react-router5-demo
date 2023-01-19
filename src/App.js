@@ -1,4 +1,5 @@
 import { NavLink, Route } from 'react-router-dom'
+import MyNavLink from './components/MyNavLink'
 import Header from './components/Header'
 import Home from './pages/Home'
 import About from './pages/About'
@@ -21,8 +22,11 @@ function App() {
 
             {/*React 中，靠路由链接实现切换组件*/}
             {/*编写路由链接*/}
-            <NavLink activeClassName="highlight" className="list-group-item" to="/about">About</NavLink>
-            <NavLink activeClassName="highlight" className="list-group-item" to="/home">Home</NavLink>
+            {/*<NavLink activeClassName="highlight" className="list-group-item" to="/about">About</NavLink>*/}
+            {/*<NavLink activeClassName="highlight" className="list-group-item" to="/home">Home</NavLink>*/}
+
+            <MyNavLink to="/about">About</MyNavLink>
+            <MyNavLink to="/home">Home</MyNavLink>
 
           </div>
         </div>
