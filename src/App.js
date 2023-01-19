@@ -21,8 +21,8 @@ function App() {
 
             {/*React 中，靠路由链接实现切换组件*/}
             {/*编写路由链接*/}
-            <NavLink activeClassName="active" className="list-group-item" to="/about">About</NavLink>
-            <NavLink activeClassName="active" className="list-group-item" to="/home">Home</NavLink>
+            <NavLink activeClassName="highlight" className="list-group-item" to="/about">About</NavLink>
+            <NavLink activeClassName="highlight" className="list-group-item" to="/home">Home</NavLink>
 
           </div>
         </div>
