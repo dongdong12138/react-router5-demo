@@ -26,7 +26,7 @@ function App() {
             {/*<NavLink activeClassName="highlight" className="list-group-item" to="/home">Home</NavLink>*/}
 
             <MyNavLink to="/about">About</MyNavLink>
-            <MyNavLink to="/home">Home</MyNavLink>
+            <MyNavLink to="/home/a/b">Home</MyNavLink>
 
           </div>
         </div>
