@@ -1,4 +1,4 @@
-import { NavLink, Route, Switch } from 'react-router-dom'
+import { NavLink, Route, Switch, Redirect } from 'react-router-dom'
 import MyNavLink from './components/MyNavLink'
 import Header from './components/Header'
 import Home from './pages/Home'
@@ -38,6 +38,7 @@ function App() {
               <Switch>
                 <Route path="/about" component={About}/>
                 <Route path="/home" component={Home}/>
+                <Redirect to="/about"/>
               </Switch>
 
             </div>
