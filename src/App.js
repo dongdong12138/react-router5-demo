@@ -25,8 +25,8 @@ function App() {
             {/*<NavLink activeClassName="highlight" className="list-group-item" to="/about">About</NavLink>*/}
             {/*<NavLink activeClassName="highlight" className="list-group-item" to="/home">Home</NavLink>*/}
 
-            <MyNavLink to="/dongdong/about">About</MyNavLink>
-            <MyNavLink to="/dongdong/home">Home</MyNavLink>
+            <MyNavLink to="/about">About</MyNavLink>
+            <MyNavLink to="/home">Home</MyNavLink>
 
           </div>
         </div>
@@ -36,8 +36,8 @@ function App() {
 
               {/*注册路由*/}
               <Switch>
-                <Route path="/dongdong/about" component={About}/>
-                <Route path="/dongdong/home" component={Home}/>
+                <Route path="/about" component={About}/>
+                <Route path="/home" component={Home}/>
               </Switch>
 
             </div>
