@@ -9,7 +9,7 @@ function App() {
     <div>
       <div className="row">
         <div className="col-xs-offset-2 col-xs-8">
-          <Header />
+          <Header/>
         </div>
       </div>
       <div className="row">
