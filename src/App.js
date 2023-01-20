@@ -37,7 +37,7 @@ function App() {
               {/*注册路由*/}
               <Switch>
                 <Route path="/about" component={About}/>
-                <Route path="/home" component={Home} exact={true}/>
+                <Route path="/home" component={Home}/>
                 <Redirect to="/about"/>
               </Switch>
 
