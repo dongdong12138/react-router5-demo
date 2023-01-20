@@ -3,7 +3,6 @@ import MyNavLink from './components/MyNavLink'
 import Header from './components/Header'
 import Home from './pages/Home'
 import About from './pages/About'
-import Test from './pages/Test'
 
 function App() {
   return (
@@ -39,7 +38,6 @@ function App() {
               <Switch>
                 <Route path="/dongdong/about" component={About}/>
                 <Route path="/dongdong/home" component={Home}/>
-                <Route path="/dongdong/home" component={Test}/>
               </Switch>
 
             </div>
