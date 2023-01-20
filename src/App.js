@@ -1,8 +1,9 @@
-import { NavLink, Route } from 'react-router-dom'
+import { NavLink, Route, Switch } from 'react-router-dom'
 import MyNavLink from './components/MyNavLink'
 import Header from './components/Header'
 import Home from './pages/Home'
 import About from './pages/About'
+import Test from './pages/Test'
 
 function App() {
   return (
@@ -35,8 +36,11 @@ function App() {
             <div className="panel-body">
 
               {/*注册路由*/}
-              <Route path="/about" component={About}/>
-              <Route path="/home" component={Home}/>
+              <Switch>
+                <Route path="/about" component={About}/>
+                <Route path="/home" component={Home}/>
+                <Route path="/home" component={Test}/>
+              </Switch>
 
             </div>
           </div>
