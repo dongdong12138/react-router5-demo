@@ -20,14 +20,20 @@ class Message extends Component {
             messageList.map(message => {
               return (
                 <li key={message.id}>
-                  <Link to="/home/message/detail">{message.title}</Link>
+
+                  {/*向路由组件传递 params 参数*/}
+                  <Link to={`/home/message/detail/${message.id}/${message.title}`}>{message.title}</Link>
+
                 </li>
               )
             })
           }
         </ul>
         <hr/>
-        <Route path="/home/message/detail" component={Detail}/>
+
+        {/*声明接收 params 参数*/}
+        <Route path="/home/message/detail/:id/:title" component={Detail}/>
+
       </div>
     )
   }
