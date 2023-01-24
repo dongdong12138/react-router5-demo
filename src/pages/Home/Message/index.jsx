@@ -22,7 +22,10 @@ class Message extends Component {
                 <li key={message.id}>
 
                   {/*向路由组件传递 params 参数*/}
-                  <Link to={`/home/message/detail/${message.id}/${message.title}`}>{message.title}</Link>
+                  {/*<Link to={`/home/message/detail/${message.id}/${message.title}`}>{message.title}</Link>*/}
+
+                  {/*向路由组件传递 search 参数*/}
+                  <Link to={`/home/message/detail?id=${message.id}&title=${message.title}`}>{message.title}</Link>
 
                 </li>
               )
@@ -32,7 +35,10 @@ class Message extends Component {
         <hr/>
 
         {/*声明接收 params 参数*/}
-        <Route path="/home/message/detail/:id/:title" component={Detail}/>
+        {/*<Route path="/home/message/detail/:id/:title" component={Detail}/>*/}
+
+        {/*search 参数无需声明接收，正常注册路由即可*/}
+        <Route path="/home/message/detail" component={Detail}/>
 
       </div>
     )
