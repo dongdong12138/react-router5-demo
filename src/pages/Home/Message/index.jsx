@@ -11,6 +11,16 @@ class Message extends Component {
     ]
   }
 
+  pushShow = (id, title) => {
+    // 编程式路由导航-传递 params 参数
+    this.props.history.push(`/home/message/detail/${id}/${title}`)
+  }
+
+  replaceShow = (id, title) => {
+    // 编程式路由导航-传递 params 参数
+    this.props.history.replace(`/home/message/detail/${id}/${title}`)
+  }
+
   render() {
     const {messageList} = this.state
     return (
@@ -23,6 +33,8 @@ class Message extends Component {
 
                   {/*向路由组件传递 params 参数*/}
                   <Link to={`/home/message/detail/${message.id}/${message.title}`}>{message.title}</Link>
+                  &nbsp;<button onClick={() => this.pushShow(message.id, message.title)}>push查看</button>
+                  &nbsp;<button onClick={() => this.replaceShow(message.id, message.title)}>replace查看</button>
 
                   {/*向路由组件传递 search 参数*/}
                   {/*<Link to={`/home/message/detail?id=${message.id}&title=${message.title}`}>{message.title}</Link>*/}
