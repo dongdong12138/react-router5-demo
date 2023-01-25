@@ -16,7 +16,10 @@ class Message extends Component {
     // this.props.history.push(`/home/message/detail/${id}/${title}`)
 
     // 编程式路由导航-传递 search 参数
-    this.props.history.push(`/home/message/detail?id=${id}&title=${title}`)
+    // this.props.history.push(`/home/message/detail?id=${id}&title=${title}`)
+
+    // 编程式路由导航-传递 state 参数
+    this.props.history.push('/home/message/detail', {id, title})
   }
 
   replaceShow = (id, title) => {
@@ -24,7 +27,10 @@ class Message extends Component {
     // this.props.history.replace(`/home/message/detail/${id}/${title}`)
 
     // 编程式路由导航-传递 search 参数
-    this.props.history.replace(`/home/message/detail?id=${id}&title=${title}`)
+    // this.props.history.replace(`/home/message/detail?id=${id}&title=${title}`)
+
+    // 编程式路由导航-传递 state 参数
+    this.props.history.replace('/home/message/detail', {id, title})
   }
 
   render() {
@@ -61,10 +67,10 @@ class Message extends Component {
         {/*<Route path="/home/message/detail/:id/:title" component={Detail}/>*/}
 
         {/*search 参数无需声明接收，正常注册路由即可*/}
-        <Route path="/home/message/detail" component={Detail}/>
+        {/*<Route path="/home/message/detail" component={Detail}/>*/}
 
         {/*state 参数无需声明接收，正常注册路由即可*/}
-        {/*<Route path="/home/message/detail" component={Detail}/>*/}
+        <Route path="/home/message/detail" component={Detail}/>
 
       </div>
     )

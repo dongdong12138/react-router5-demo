@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import qs from 'qs'
+// import qs from 'qs'
 
 const contentArr = [
   {id: '001', content: '内容1'},
@@ -15,11 +15,11 @@ class Detail extends Component {
     // const {id, title} = this.props.match.params
 
     // 获取并解析 search 参数
-    const {search} = this.props.location
-    const {id, title} = qs.parse(search.slice(1))
+    // const {search} = this.props.location
+    // const {id, title} = qs.parse(search.slice(1))
 
     // 获取 state 参数
-    // const {id, title} = this.props.location.state || {}
+    const {id, title} = this.props.location.state || {}
 
     const {content} = contentArr.filter(item => item.id === id)[0]
     return (
