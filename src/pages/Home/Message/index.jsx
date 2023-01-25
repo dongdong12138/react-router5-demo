@@ -33,6 +33,14 @@ class Message extends Component {
     this.props.history.replace('/home/message/detail', {id, title})
   }
 
+  goForward = () => {
+    this.props.history.goForward()
+  }
+
+  goBack = () => {
+    this.props.history.goBack()
+  }
+
   render() {
     const {messageList} = this.state
     return (
@@ -44,7 +52,7 @@ class Message extends Component {
                 <li key={message.id}>
 
                   {/*向路由组件传递 params 参数*/}
-                  <Link to={`/home/message/detail/${message.id}/${message.title}`}>{message.title}</Link>
+                  {/*<Link to={`/home/message/detail/${message.id}/${message.title}`}>{message.title}</Link>*/}
                   &nbsp;<button onClick={() => this.pushShow(message.id, message.title)}>push查看</button>
                   &nbsp;<button onClick={() => this.replaceShow(message.id, message.title)}>replace查看</button>
 
@@ -71,6 +79,9 @@ class Message extends Component {
 
         {/*state 参数无需声明接收，正常注册路由即可*/}
         <Route path="/home/message/detail" component={Detail}/>
+
+        <button onClick={this.goForward}>前进</button>
+        <button onClick={this.goBack}>后退</button>
 
       </div>
     )
