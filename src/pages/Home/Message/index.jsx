@@ -41,6 +41,10 @@ class Message extends Component {
     this.props.history.goBack()
   }
 
+  go = (step) => {
+    this.props.history.go(step)
+  }
+
   render() {
     const {messageList} = this.state
     return (
@@ -82,6 +86,8 @@ class Message extends Component {
 
         <button onClick={this.goForward}>前进</button>
         <button onClick={this.goBack}>后退</button>
+        <button onClick={() => this.go(2)}>前进2步</button>
+        <button onClick={() => this.go(-2)}>后退2步</button>
 
       </div>
     )
